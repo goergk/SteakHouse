@@ -37,7 +37,7 @@
 .Navbar {
     @include flex-row;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: em(81);
     box-shadow: em(0) em(1) em(21) rgba(0, 0, 0, 0.0520088);
 
@@ -46,7 +46,7 @@
         justify-content: space-between;
         width: calc(100% - em(286));
         max-width: calc(em(1920) - em(286));
-        height: 100%;
+        height: 100%;        
 
         @include breakpoint(xlarge) {
             width: calc(100% - em(50));

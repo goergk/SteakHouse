@@ -1,4 +1,3 @@
-@use '../abstracts/mixins' as *;
 @use '../abstracts/fonts' as *;
 
 * {
@@ -12,6 +11,8 @@ li {
 }
 
 body {
-    @include flex-col;
     @include sofia-pro;
+    width: 100%;
 }
+
+
