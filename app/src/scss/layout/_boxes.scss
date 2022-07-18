@@ -1,0 +1,56 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/fonts' as *;
+
+// Boxes mixins
+@mixin box {
+  @include flex-col;
+  height: em(415);
+  width: 50%;
+  border-radius: em(7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include breakpoint(large) {
+    width: 100%;
+  }
+
+  @include breakpoint(medium) {
+    height: em(345);
+  }
+}
+
+// Main Boxes styling
+.Boxes {
+  @include flex-row;
+  justify-content: space-between;
+  gap: em(16);
+  width: calc(100% - em(72));
+  margin-bottom: em(50);
+
+  @include breakpoint(xlarge) {
+    width: calc(100% - em(36));
+  }
+
+  @include breakpoint(large) {
+    @include flex-col;
+  }
+
+  @include breakpoint(medium) {
+    width: calc(100% - em(20));
+  }
+
+}
+
+.Box1 {
+  @include box;
+  background-image: url('../../assets/images/dana-devolk-x2cNcfz_xXU-unsplash@2x.png');
+}
+
+.Box2 {
+  @include box;
+  background-image: url('../../assets/images/aplikacja@2x.png');
+}

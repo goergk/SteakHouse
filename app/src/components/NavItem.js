@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NavItem = ({ text, isOpen }) => {
+const NavItem = ({ text, isOpen, size }) => {
   return (
-    <li className='Navbar__item' style={{ display: !isOpen ? 'none' : '' }}>
+    <li className='Navbar__item' style={{ display: isOpen || size > 750 ? '' : 'none' }}>
       <a href='/' className='Navbar__link'>
         {text}
       </a>

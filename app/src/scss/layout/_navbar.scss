@@ -5,160 +5,209 @@
 
 //Navbar mixins
 @mixin option {
-    @include flex-col;
-    justify-content: center;
-    width: em(97);
-    height: em(57);
-    user-select: none;
+	@include flex-col;
+	justify-content: center;
+	width: em(97);
+	height: em(57);
+	user-select: none;
 
-    @include breakpoint(large) {
-        width: em(42);
-        height: em(42);
-    }
+	@include breakpoint(large) {
+		width: em(42);
+		height: em(42);
+	}
 
-    &__text {
-        font-size: em(14);
-        line-height: em(14);
-        margin-top: em(6.47);
+	&__text {
+		font-size: em(14);
+		line-height: em(14);
+		margin-top: em(6.47);
 
-        @include breakpoint(large) {
-            display: none;
-        }
-    }
+		@include breakpoint(large) {
+				display: none;
+		}
+	}
 
-    &:hover {
-        cursor: pointer;
-        color: $cherry-red;
-        font-weight: 600;
-    }
+	&:hover {
+		cursor: pointer;
+		color: $cherry-red;
+		font-weight: 600;
+	}
+}
+
+@mixin nav-mobile {
+	@include flex-col;
+	background-color: $white;
+	padding: em(10) em(20);
+	width: em(200);
+	position: absolute;
+	top: em(81);
+	gap: em(20);
+	box-shadow: em(0) em(8) em(30) em(-25) rgba(0, 0, 0, 1);
 }
 
 //Main Navbar styling
 .Navbar {
-    @include flex-row;
-    justify-content: center;
-    width: 100%;
-    height: em(81);
-    box-shadow: em(0) em(1) em(21) rgba(0, 0, 0, 0.0520088);
+	@include flex-row;
+	justify-content: center;
+	width: 100%;
+	height: em(81);
+	box-shadow: em(0) em(1) em(21) rgba(0, 0, 0, 0.0520088);
 
-    &__nav {
-        @include flex-row;
-        justify-content: space-between;
-        width: calc(100% - em(286));
-        max-width: calc(em(1920) - em(286));
-        height: 100%;        
+	&__nav {
+			@include flex-row;
+			justify-content: space-between;
+			width: calc(100% - em(286));
+			max-width: calc(em(1920) - em(286));
+			height: 100%;        
 
-        @include breakpoint(xlarge) {
-            width: calc(100% - em(50));
-        }
+			@include breakpoint(xlarge) {
+					width: calc(100% - em(50));
+			}
 
-        @include breakpoint(large) {
-            width: calc(100% - em(20));
-        }
-    }
+			@include breakpoint(large) {
+					width: calc(100% - em(20));
+			}
+	}
 
-    &__items {
-        @include flex-row;
-        justify-content: flex-start;
-        width: fit-content;
-        height: 100%;
-    }
+	&__items {
+			@include flex-row;
+			justify-content: flex-start;
+			width: fit-content;
+			height: 100%;
+	}
 
-    &__mobile {
-        @include breakpoint(medium) {
-            @include flex-col;
-            background-color: $white;
-            padding: em(10) em(20);
-            width: em(200);
-            height: fit-content;
-            position: absolute;
-            top: em(81);
-            gap: em(20);
-            scale: 1;
-            transition: all 0.2s ease-in-out;
-        }
-    }
+	&__mobile {
+			@include breakpoint(medium) {
+					@include nav-mobile;
+					height: 0;
+					opacity: 0;
+					animation: in ease-in 1;
+					animation-fill-mode: forwards;
+					animation-duration: 0.2s;
+			}
+	}
 
-    &__item {
-        user-select: none;
-        margin-right: em(53);
+	&__closed {
+			@include breakpoint(medium) {
+					@include nav-mobile;
+					height: em(275);
+					opacity: 1; 
+					animation: out ease-in 1;
+					animation-fill-mode: forwards;
+					animation-duration: 0.2s;
+			}
+	}
 
-        @include breakpoint(xlarge) {
-            margin-right: em(30);
-        }
+	&__item {
+			user-select: none;
+			margin-right: em(53);
 
-        @include breakpoint(large) {
-            margin-right: em(18);
-        }
+			@include breakpoint(xlarge) {
+					margin-right: em(30);
+			}
 
-        @include breakpoint(medium) {
-            width: 100%;
-            margin-left: em(15);
-        }
-    }
+			@include breakpoint(large) {
+					margin-right: em(18);
+			}
 
-    &__options {
-        @include flex-row;
-        justify-content: flex-end;
-        width: fit-content;
-        height: 100%;
-        gap: em(14.5);
+			@include breakpoint(medium) {
+					width: 100%;
+					margin-left: em(15);
+			}
+	}
 
-        @include breakpoint(xlarge) {
-            gap: em(2);
-        }
+	&__options {
+		@include flex-row;
+		justify-content: flex-end;
+		width: fit-content;
+		height: 100%;
+		gap: em(14.5);
 
-        @include breakpoint(large) {
-            gap: em(6);
-        }
-    }
+		@include breakpoint(xlarge) {
+			gap: em(2);
+		}
 
-    &__option {
-        @include option;
+		@include breakpoint(large) {
+			gap: em(6);
+		}
+	}
 
-        &__selected {
-            @include option;
-            background: $cherry-red;
-            border-radius: em(10);
-            color: $white;
-            transition: all 0.15s ease-in-out;
+	&__option {
+		@include option;
 
-            &:hover {
-                color: $white;
-                background: black;
-                font-weight: 400;
-            }
-        }
-    }
+		&__selected {
+			@include option;
+			background: $cherry-red;
+			border-radius: em(10);
+			color: $white;
+			transition: all 0.15s ease-in-out;
 
-    &__link {
-        user-select: none;
-        font-size: em(14);
-        line-height: em(32);
+			&:hover {
+					color: $white;
+					background: black;
+					font-weight: 400;
+			}
+		}
+	}
 
-        &:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    }
+	&__link {
+		user-select: none;
+		font-size: em(14);
+		line-height: em(32);
 
-    &__logo{
-        margin-right: em(68.5);
+		&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+		}
+	}
 
-        @include breakpoint(xlarge) {
-            margin-right: em(30);
-        }     
-    }
+	&__logo{
+		margin-right: em(68.5);
 
-    &__dots {
-        display: none;
+		@include breakpoint(xlarge) {
+				margin-right: em(30);
+		}     
+	}
 
-        &:hover {
-            cursor: pointer;
-        }
+	&__dots {
+		display: none;
 
-        @include breakpoint(medium) {
-            display: block;
-        }
-    }
+		&:hover {
+				cursor: pointer;
+		}
+
+		@include breakpoint(medium) {
+				display: block;
+		}
+	}
+}
+
+//Animations 
+@keyframes out {
+		0% {
+				opacity: 1;
+				height: em(275);
+		}
+		75%{
+				opacity: 0.5;
+				height: em(275);
+		}
+		100% {
+				opacity: 0;
+				height: 0;
+		}
+}
+
+@keyframes in {
+		0% {
+				opacity: 0;
+				height: 0;
+		}
+		75% {
+				opacity: 0.5;
+				height: em(275);
+		}
+		100% {
+				opacity: 1;
+				height: em(275);
+		}
 }

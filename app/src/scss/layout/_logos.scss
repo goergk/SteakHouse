@@ -16,7 +16,9 @@
     height: em(77);
 
     @include breakpoint(medium) {
-      gap: 75px;
+      gap: em(75);
+      padding-left: 100%;
+      animation: anime 10s linear infinite;
     }
   }
 
@@ -37,15 +39,17 @@
 
   @include breakpoint(medium) {
     width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
-// @keyframes anime {
-//   0% {
-//     transform: translate3d(0, 0, 0);
-//   }
+@keyframes anime {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
 
-//   100% {
-//     transform: translate3d(-50%, 0, 0);
-//   }
-// }
+  100% {
+    transform: translate3d(-155%, 0, 0);
+  }
+}

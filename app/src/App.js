@@ -1,5 +1,5 @@
 import '../src/scss/style.scss';
-import { Navbar, Slider, Logos } from './layout/index';
+import { Navbar, Slider, Logos, Boxes } from './layout/index';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Navbar />
       <Slider />
       <Logos />
+      <Boxes />
     </div>
   );
 }

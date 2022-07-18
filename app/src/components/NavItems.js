@@ -12,8 +12,8 @@ const NavItems = () => {
   const size = useWindowSize();
 
   useEffect(() => {
-    if (size > 750 && !isOpen) {
-      setIsOpen(true);
+    if (size > 750 && isOpen) {
+      setIsOpen(false);
     }
   }, [isOpen, size]);
 
@@ -31,9 +31,9 @@ const NavItems = () => {
       <li>
         <Dots className='Navbar__dots' onClick={handleOpenMobile} />
       </li>
-      <div className={isOpen ? 'Navbar__mobile' : ''}>
+      <div className={isOpen ? 'Navbar__mobile' : 'Navbar__closed'}>
         {Items_data.map((item, index) => {
-          return <NavItem key={index} text={item} isOpen={isOpen} />
+          return <NavItem key={index} text={item} isOpen={isOpen} size={size} />
         })}
       </div>
     </ul>

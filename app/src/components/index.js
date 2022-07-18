@@ -12,3 +12,7 @@ export { default as SliderText } from './SliderText';
 
 // Logos components
 export { default as Logo } from './Logo';
+
+// Boxes components
+export { default as Box1 } from './Box1';
+export { default as Box2 } from './Box2';
