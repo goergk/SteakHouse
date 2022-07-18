@@ -1,9 +1,5 @@
 @use '../abstracts/mixins' as *;
-
-@font-face {
-    font-family: 'Sofia Pro';
-    src: url('../../assets/fonts/Sofia Pro Regular.ttf') format('truetype');
-}
+@use '../abstracts/fonts' as *;
 
 * {
     margin: 0;
@@ -17,6 +13,5 @@ li {
 
 body {
     @include flex-col;
-    font-family: 'Sofia Pro';
-    font-weight: 400;
+    @include sofia-pro;
 }
