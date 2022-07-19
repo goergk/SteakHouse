@@ -16,9 +16,10 @@
     height: em(77);
 
     @include breakpoint(medium) {
+      max-width: em(751);
       gap: em(75);
-      padding-left: 100%;
-      animation: anime 10s linear infinite;
+      padding-left: em(70);
+      animation: anime 9s linear infinite;
     }
   }
 
@@ -38,7 +39,7 @@
   }
 
   @include breakpoint(medium) {
-    width: 100%;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -50,6 +51,6 @@
   }
 
   100% {
-    transform: translate3d(-155%, 0, 0);
+    transform: translate3d(em(-805), 0, 0);
   }
 }
