@@ -9,6 +9,7 @@ export { default as NavOption } from './NavOption';
 
 // Slider components
 export { default as SliderText } from './SliderText';
+export { default as Slide } from './Slide';
 
 // Logos components
 export { default as Logo } from './Logo';

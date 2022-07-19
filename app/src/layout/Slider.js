@@ -1,13 +1,27 @@
 import React from 'react';
-import { SliderText } from '../components/index';
 import '../scss/style.scss';
+import { Slide } from '../components/index';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Slider = () => {
   return (
-    <div className='Slider'>
-      <SliderText />
-      <div className='Slider__photo' />
-    </div>
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay]}
+      slidesPerView={1}
+      autoplay={{ disableOnInteraction: false }}
+      pagination={{ clickable: true }}
+      style={{ width: '100%' }}
+    >
+      {[1, 2, 3].map((index) => (
+        <SwiperSlide key={index}>
+          <Slide index={index} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   )
 }
 

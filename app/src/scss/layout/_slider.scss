@@ -4,7 +4,23 @@
 @use '../abstracts/functions' as *;
 @use '../abstracts/fonts' as *;
 
-.Slider{
+// Mixins
+@mixin photo {
+  justify-content: center;
+  width: 50%;
+  height: em(611);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include breakpoint(large) {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+// Main Slide styling
+.Slide{
   @include flex-row;
   justify-content: flex-start;
   width: 100%;
@@ -89,18 +105,18 @@
     @include flex-col;
   } 
 
-  &__photo {
-      justify-content: center;
-      width: 50%;
-      height: em(611);
-      background-image: url('../../assets/images/Bitmapv.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+  &__photo__1 {
+    @include photo;
+    background-image: url('../../assets/images/Bitmapv.png');
+  }
 
-      @include breakpoint(large) {
-        width: 100%;
-        height: 50%;
-      }
+  &__photo__2 {
+    @include photo;
+    background-image: url('../../assets/images/emerson-vieira-_aR4l6fj6wQ-unsplash.jpg');
+  }
+
+  &__photo__3 {
+    @include photo;
+    background-image: url('../../assets/images/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg');
   }
 }

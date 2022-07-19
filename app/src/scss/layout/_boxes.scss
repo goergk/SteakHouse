@@ -122,8 +122,19 @@
   background-image: url('../../assets/images/aplikacja@2x.png');
 }
 
-.icon{
-  &:hover{
+.icon {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: contrast(200%);
+    transform: scale(1.3);
     cursor: pointer;
+  }
+
+  @include breakpoint(medium) {
+    &:hover {
+      all: unset;
+      cursor: pointer;
+    }
   }
 }

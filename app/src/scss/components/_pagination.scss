@@ -1,0 +1,29 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/functions' as *;
+
+.swiper-pagination-bullet {
+  background-color: #EFEFEF !important;
+  margin-right: em(12) !important;
+  width: em(8) !important;
+  height: em(8) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(0,0,0,0) !important;
+  content: url('../../assets/icons/Oval Copy 5.svg') !important;
+  width: em(9) !important;
+  height: em(9) !important;
+  margin-bottom: em(-1) !important;
+}
+
+.swiper-pagination {
+  width: fit-content !important;
+  left: em(158) !important;
+  bottom: em(0) !important;
+  bottom: em(48) !important;
+
+  @include breakpoint(xlarge) {
+    left: em(29) !important;
+  }
+}
+
