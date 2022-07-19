@@ -6,7 +6,10 @@ const NavOption = ({
   selected,
 }) => {
   return (
-    <div className={!selected ? 'Navbar__option' : 'Navbar__option__selected'}>
+    <div
+      className={!selected ? 'Navbar__option' : 'Navbar__option__selected'}
+      onClick={e => alert(text)}
+    >
       {icon}
       <p className='Navbar__option__text'>
         {text}

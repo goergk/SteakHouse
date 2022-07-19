@@ -17,9 +17,9 @@ const Box2 = () => {
           &nbsp; Pobierz aplikację UberEats już dziś.
         </p>
         <div className='Boxes__container__icons'>
-          <Icon1 className='icon' />
-          <Icon2 className='icon' />
-          <Icon3 className='icon' />
+          <Icon1 className='icon' onClick={e => alert('Google Play')} />
+          <Icon2 className='icon' onClick={e => alert('App Store')} />
+          <Icon3 className='icon' onClick={e => alert('Huawei Store')} />
         </div>
         <Button text='Zamów online' inverse={true} />
       </div>

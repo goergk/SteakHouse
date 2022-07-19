@@ -25,6 +25,16 @@
   }
 }
 
+@mixin mobile-hover{
+  @include breakpoint(large) {
+    &:hover {
+      background-color: $cherry-red;
+      color: white;
+    }
+  }
+}
+
+// Main button styling
 .Btn{
   @include btn;
 
@@ -32,6 +42,8 @@
     cursor: pointer;
     background-color: black;
   }
+
+  @include mobile-hover;
 }
 
 .Btn__inverse {
@@ -42,4 +54,6 @@
     color: black;
     background-color: white;
   }
+
+  @include mobile-hover;
 }
