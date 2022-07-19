@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box1, Box2 } from '../components/index';
+import { Box1, Box2 } from '../components/boxes/index';
 import '../scss/style.scss';
 
 const Boxes = () => {

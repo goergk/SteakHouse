@@ -1,5 +1,5 @@
 import React from 'react';
-import { Options_data } from '../data/data';
+import { Options_data } from '../../data/data';
 import NavOption from './NavOption';
 
 const NavOptions = () => {

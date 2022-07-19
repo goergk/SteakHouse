@@ -1,6 +1,5 @@
 import React from 'react';
-import '../scss/style.scss';
-import { Button } from './index';
+import { Button } from '../index';
 
 const Box1 = () => {
   return (

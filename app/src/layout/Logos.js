@@ -1,5 +1,5 @@
 import React from 'react';
-import { Logo } from '../components/index';
+import { Logo } from '../components/logos/index';
 import { Logos_data } from '../data/data';
 import '../scss/style.scss';
 

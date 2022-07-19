@@ -1,6 +1,5 @@
 import React from 'react';
 import { SliderText } from './index';
-import '../scss/style.scss';
 
 const Slide = ({ index }) => {
 

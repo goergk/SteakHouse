@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from './index';
-import '../scss/style.scss';
+import { Button } from '../index';
 
 const SliderText = () => {
   return (

@@ -1,9 +1,8 @@
 import React from 'react';
-import '../scss/style.scss';
-import { Button } from './index';
-import { ReactComponent as Icon1 } from '../assets/icons/Group 4.svg';
-import { ReactComponent as Icon2 } from '../assets/icons/App_Store_(iOS).svg';
-import { ReactComponent as Icon3 } from '../assets/icons/huawei-app-badge-9757fa 2.svg';
+import { Button } from '../index';
+import { ReactComponent as Icon1 } from '../../assets/icons/Group 4.svg';
+import { ReactComponent as Icon2 } from '../../assets/icons/App_Store_(iOS).svg';
+import { ReactComponent as Icon3 } from '../../assets/icons/huawei-app-badge-9757fa 2.svg';
 
 const Box2 = () => {
   return (

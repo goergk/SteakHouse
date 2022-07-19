@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavItems, NavOptions } from '../components/index';
+import { NavItems, NavOptions } from '../components/navbar/index';
 import '../scss/style.scss';
 
 const Navbar = () => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Items_data } from '../data/data';
-import Logo from '../assets/images/l.png';
-import { ReactComponent as Dots } from '../assets/icons/dots.svg';
+import { Items_data } from '../../data/data';
+import Logo from '../../assets/images/l.png';
+import { ReactComponent as Dots } from '../../assets/icons/dots.svg';
+import { useWindowSize } from '../../helpers/useWindowSize';
 import { NavItem } from './index';
-import { useWindowSize } from '../helpers/useWindowSize';
 
 
 const NavItems = () => {

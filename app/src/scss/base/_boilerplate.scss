@@ -1,18 +1,33 @@
 @use '../abstracts/fonts' as *;
+@use '../abstracts/variables' as *;
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a, 
 li {
-    all: unset;
+  all: unset;
 }
 
 body {
-    @include sofia-pro;
-    width: 100%;
+  @include sofia-pro;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+html::-webkit-scrollbar {
+  width: 1em;
+}
+
+html::-webkit-scrollbar-track {
+  background: black;
+  background-color: $cherry-red;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: black;
 }
 
 
