@@ -1,12 +1,12 @@
 @use './functions' as *;
 
 // Breakpoints:
-// 750px, 1000px, 1440px
+// 750px, 1050px, 1480px
 
 $breakpoints-down: (
   "medium": em(750),
-  "large": em(1000),
-  "xlarge": em(1440),
+  "large": em(1050),
+  "xlarge": em(1480),
 );
 
 @mixin breakpoint($size) {

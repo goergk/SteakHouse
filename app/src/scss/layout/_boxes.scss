@@ -13,6 +13,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
 
   @include breakpoint(large) {
     width: 100%;
@@ -31,6 +32,64 @@
   width: calc(100% - em(72));
   margin-bottom: em(50);
 
+  &__container {
+    width: calc(100% - em(125));
+    height: 100%;
+    padding-left: em(125);
+
+    &__header{
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 32px;
+      margin-top: 82px;
+
+    @include breakpoint(medium) {
+        font-size: 26px;
+        line-height: 23px;
+        margin-top: 62px;
+      }
+    }
+
+    &__description{
+      margin: 29px 0 32px 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+      max-width: 324px;
+
+      &__bg1{
+        font-weight: 700;
+        background-color: black;
+      }
+
+      &__bg2 {
+        font-weight: 600;
+        background-color: $cherry-red;
+      } 
+
+      @include breakpoint(medium) {
+        width: 200px;
+        margin: 19px 0 22px 0;
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    &__icons{
+      @include flex-row;
+      justify-content: space-between;
+      gap: em(14);
+      width: fit-content;
+      margin-top: -16px;
+      margin-bottom: 16px;
+    }
+
+    @include breakpoint(xlarge) {
+      width: calc(100% - em(20));
+      padding-left: em(20);
+    }
+  }
+
   @include breakpoint(xlarge) {
     width: calc(100% - em(36));
   }
@@ -48,9 +107,23 @@
 .Box1 {
   @include box;
   background-image: url('../../assets/images/dana-devolk-x2cNcfz_xXU-unsplash@2x.png');
+
+  .Boxes__container__description{
+    width: 285px;
+
+  @include breakpoint(medium) {
+      width: 200px;
+    }
+  }
 }
 
 .Box2 {
   @include box;
   background-image: url('../../assets/images/aplikacja@2x.png');
+}
+
+.icon{
+  &:hover{
+    cursor: pointer;
+  }
 }

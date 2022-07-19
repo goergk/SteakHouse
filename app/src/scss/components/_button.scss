@@ -2,9 +2,12 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/breakpoints' as *;
 @use '../abstracts/functions' as *;
+@use '../abstracts/fonts' as *;
 
-.Btn{
+// Mixins
+@mixin btn {
   @include flex-col;
+  @include sofia-pro;
   justify-content: center;
   width: em(204);
   height: em(49);
@@ -16,13 +19,27 @@
   border-radius: 10px;
   transition: all 0.15s ease-in-out;
 
+  @include breakpoint(medium) {
+    font-size: em(12.4);
+    line-height: em(12.4);
+  }
+}
+
+.Btn{
+  @include btn;
+
   &:hover {
     cursor: pointer;
     background-color: black;
   }
+}
 
-  @include breakpoint(medium) { 
-    font-size: em(12.4);
-    line-height: em(12.4);
+.Btn__inverse {
+  @include btn;
+
+  &:hover {
+    cursor: pointer;
+    color: black;
+    background-color: white;
   }
 }

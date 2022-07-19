@@ -1,9 +1,9 @@
 import React from 'react';
 import '../scss/style.scss';
 
-const Button = ({ text }) => {
+const Button = ({ text, inverse }) => {
   return (
-    <button className='Btn'>
+    <button className={inverse ? 'Btn__inverse' : 'Btn'}>
       {text}
     </button>
   )
