@@ -59,7 +59,7 @@
           margin-top: 30px;
           font-size: em(36);
           line-height: 45px;
-          max-width: 370px;
+          max-width: 370px;          
         }
 
         @include breakpoint(medium) {
@@ -95,9 +95,11 @@
       }
 
       @include breakpoint(large) {
-        width: calc(100% - em(20));
-        padding-left: em(20);
+        width: 100%;
+        padding-left: 0;
         height: 50%;
+        align-items: center;
+        text-align: center;
       }
     }
 
