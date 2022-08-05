@@ -3,7 +3,7 @@ import React from 'react';
 const NavItem = ({ text, isOpen, size }) => {
   return (
     <li className='Navbar__item' style={{ display: isOpen || size > 750 ? '' : 'none' }}>
-      <a href='/' className='Navbar__link'>
+      <a href='/SteakHouse/' className='Navbar__link'>
         {text}
       </a>
     </li>

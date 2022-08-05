@@ -24,7 +24,7 @@ const NavItems = () => {
   return (
     <ul className='Navbar__items'>
       <li>
-        <a href='/' className='Navbar__link'>
+        <a href='/SteakHouse/' className='Navbar__link'>
           <img src={Logo} alt="Logo" className='Navbar__logo' />
         </a>
       </li>
