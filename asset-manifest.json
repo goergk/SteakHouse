@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/SteakHouse/static/css/main.53c1f337.css",
+    "main.js": "/SteakHouse/static/js/main.00f6ee66.js",
+    "static/media/dana-devolk-x2cNcfz_xXU-unsplash@2x.png": "/SteakHouse/static/media/dana-devolk-x2cNcfz_xXU-unsplash@2x.53533b81b99aabc20cff.png",
+    "static/media/Bitmapv.png": "/SteakHouse/static/media/Bitmapv.0f83460573d7dfb145ae.png",
+    "static/media/emerson-vieira-_aR4l6fj6wQ-unsplash.jpg": "/SteakHouse/static/media/emerson-vieira-_aR4l6fj6wQ-unsplash.237a9cf49290e37f56b7.jpg",
+    "static/media/jonathan-borba-8l8Yl2ruUsg-unsplash.jpg": "/SteakHouse/static/media/jonathan-borba-8l8Yl2ruUsg-unsplash.dd01a24269c23c05ff63.jpg",
+    "static/media/aplikacja@2x.png": "/SteakHouse/static/media/aplikacja@2x.67a96b1ae66572876ec3.png",
+    "static/media/Sofia Pro Regular.ttf": "/SteakHouse/static/media/Sofia Pro Regular.77be0a74d19c41439637.ttf",
+    "static/media/Rubik-Regular.ttf": "/SteakHouse/static/media/Rubik-Regular.da39336cfcac7980f2f1.ttf",
+    "static/media/huawei-app-badge-9757fa 2.svg": "/SteakHouse/static/media/huawei-app-badge-9757fa 2.ace88782ebb1ba12ce232eb929dbb5fa.svg",
+    "static/media/koszyk.svg": "/SteakHouse/static/media/koszyk.88589d69881917a33813a2f8f930132a.svg",
+    "static/media/App_Store_(iOS).svg": "/SteakHouse/static/media/App_Store_(iOS).a22ebffd4d16073271424613f6b793a1.svg",
+    "static/media/Group 4.svg": "/SteakHouse/static/media/Group 4.b5389713720cefa7b64135a0bfa9d721.svg",
+    "static/media/dots.svg": "/SteakHouse/static/media/dots.b110f03e89190ee2c50de1f23ed5a601.svg",
+    "static/media/mojekonto.svg": "/SteakHouse/static/media/mojekonto.1d159b5267323180cafd8817d06f78fe.svg",
+    "static/media/zamow_ikona.svg": "/SteakHouse/static/media/zamow_ikona.d090291f8a57afc35d5b6b331ecdaef2.svg",
+    "index.html": "/SteakHouse/index.html",
+    "static/media/Oval Copy 5.svg": "/SteakHouse/static/media/Oval Copy 5.83bebcaacf27cad7f969.svg",
+    "main.53c1f337.css.map": "/SteakHouse/static/css/main.53c1f337.css.map",
+    "main.00f6ee66.js.map": "/SteakHouse/static/js/main.00f6ee66.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53c1f337.css",
+    "static/js/main.00f6ee66.js"
+  ]
+}
